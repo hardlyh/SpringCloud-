@@ -10,11 +10,11 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.lyh</groupId>
-	<artifactId>eureka-server</artifactId>
+	<artifactId>eureka-client</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
-	<name>eureka-serve</name>
-	<description>eureka服务端</description>
+	<name>eureka-client</name>
+	<description>eureka客户端</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -29,7 +29,7 @@
 		
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka-server</artifactId>
+			<artifactId>spring-cloud-starter-eureka</artifactId>
 		</dependency>	
 
 		<dependency>
