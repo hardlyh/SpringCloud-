@@ -1,0 +1,4 @@
+# 测试环境全局变量，配置的值会覆盖Vars中的值，但是Vars中的属性需要封装set方法 set方法没有static
+globalonstants:
+  #测试环境
+  TEST: 1
