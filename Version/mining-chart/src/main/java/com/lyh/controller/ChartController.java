@@ -11,7 +11,7 @@ public class ChartController {
 	@RequestMapping("/savePayInfo")
 	public String savePayInfo() {
 		return null;
-	}
+	}	
 	
 	
 	@RequestMapping("/profitList")
@@ -24,8 +24,4 @@ public class ChartController {
 	public String payList() {
 		return "";
 	}
-	
-	
-	
-
 }
