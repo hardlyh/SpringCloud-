@@ -1,11 +1,13 @@
 package com.mining.controller;
 
 import java.util.HashMap;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.alibaba.fastjson.JSONObject;
 import com.mining.domain.MiningOutlay;
 import com.mining.service.MiningIncomeService;
 import com.mining.service.MiningOutlayService;
@@ -27,7 +29,7 @@ public class MiningOutlayController {
 
 	@Autowired
 	private MiningOutlayService outlayService;
-	
+
 	@Autowired
 	private MiningIncomeService incomeService;
 
@@ -38,6 +40,36 @@ public class MiningOutlayController {
 		map.put(3, 10);
 		map.put(5, 13);
 		map.put(7, 18);
+	}
+
+	/**
+	 * 时间段内的总额统计测试
+	 * 
+	 * @return
+	 */
+	@RequestMapping("/getDateCountInfo")
+	public Object getDateCountInfo(String startTime, String endTime) {
+		startTime = "2020-08-05";
+		endTime = "2020-08-06";
+		MiningOutlay countByDate = outlayService.countByDate(startTime, endTime);
+		JSONObject root = new JSONObject();
+		root.put("countInfo", countByDate);
+
+		// 找到列表
+		List<MiningOutlay> list = outlayService.countByDateGroup(startTime, endTime);
+		root.put("groupList", list);
+		return root;
+	}
+
+	/**
+	 * 时间段内的总额统计测试
+	 * 
+	 * @return
+	 */
+	@RequestMapping("/getDateDetailInfo")
+	public Object getDateDetailInfo(String dateTime) {
+		List<MiningOutlay> listByDate = outlayService.listByDate(dateTime);
+		return listByDate;
 	}
 
 	/**
@@ -54,17 +86,19 @@ public class MiningOutlayController {
 		dto.setOutlayDay(date);
 		dto.setRete(rete);
 
+		// 计算利润
 		String div = MoneyUtil.div(String.valueOf(rete), "100", 2);
 		String profit = MoneyUtil.mul(String.valueOf(price), div);
 
+		// 计算总额 本+利润
 		Integer total = Integer.parseInt(profit) + price;
 
 		dto.setProfit(Integer.parseInt(profit));
 		dto.setTotalAmt(total);
 		dto.setLineNumber(TimeUtil.getSpecifiedDay(date, dayNumber));
 		boolean save = outlayService.save(dto);
-		
-		// 同时触发总额计算
+
+		// 同时触发总额计算,更新结算表中结束天数的数据
 		incomeService.addTotalInfo(dto);
 		LogUtil.info("保存完成");
 	}

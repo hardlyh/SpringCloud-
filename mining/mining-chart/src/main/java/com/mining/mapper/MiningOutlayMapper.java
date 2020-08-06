@@ -1,7 +1,9 @@
 package com.mining.mapper;
 
-import com.mining.domain.MiningOutlay;
+import java.util.List;
+
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.mining.domain.MiningOutlay;
 
 /**
  * <p>
@@ -12,5 +14,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @since 2020-08-06
  */
 public interface MiningOutlayMapper extends BaseMapper<MiningOutlay> {
-
+	
+	public MiningOutlay countByDate(String startTime,String endTime);
+	
+	public List<MiningOutlay> countByDateGroup(String startTime,String endTime);
 }

@@ -3,7 +3,7 @@
 <mapper namespace="com.mining.mapper.MiningIncomeMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.mining22.domain.MiningIncome">
+    <resultMap id="BaseResultMap" type="com.mining.domain.MiningIncome">
         <id column="income_id" property="incomeId" />
         <result column="income_day" property="incomeDay" />
         <result column="principal" property="principal" />

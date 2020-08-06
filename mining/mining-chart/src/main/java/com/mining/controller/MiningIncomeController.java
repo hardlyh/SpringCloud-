@@ -16,6 +16,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/miningIncome")
 public class MiningIncomeController {
+	
+	
+	
+	
+	/**
+	 *  获取到指定时间段内的总额信息
+	 * @return
+	 */
+	public Object getTotalInfoByDate(String startTime,String endTime) {
+		
+		
+		return null;
+	}
 
 }
 

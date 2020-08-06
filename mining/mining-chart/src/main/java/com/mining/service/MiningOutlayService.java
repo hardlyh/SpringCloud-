@@ -1,7 +1,9 @@
 package com.mining.service;
 
-import com.mining.domain.MiningOutlay;
+import java.util.List;
+
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.mining.domain.MiningOutlay;
 
 /**
  * <p>
@@ -12,5 +14,10 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2020-08-06
  */
 public interface MiningOutlayService extends IService<MiningOutlay> {
+	MiningOutlay countByDate(String startTime,String endTime);
 
+	List<MiningOutlay> countByDateGroup(String startTime,String endTime);
+	
+	List<MiningOutlay> listByDate(String dateTime);
+	
 }

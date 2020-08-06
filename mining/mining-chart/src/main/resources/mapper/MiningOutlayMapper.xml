@@ -3,7 +3,7 @@
 <mapper namespace="com.mining.mapper.MiningOutlayMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.mining22.domain.MiningOutlay">
+    <resultMap id="BaseResultMap" type="com.mining.domain.MiningOutlay">
         <id column="outlay_id" property="outlayId" />
         <result column="outlay_day" property="outlayDay" />
         <result column="day_number" property="dayNumber" />
@@ -23,11 +23,17 @@
     </sql>
 
 
- 	<select id="countByDate" resultType="BaseResultMap">
-   	 select sum(price) as price,sum(profit) as profit,sum(price)/sum(profit) as rete,sum(price)+sum(profit) as  total_amt
+ 	<select id="countByDate" resultMap="BaseResultMap">
+   	 select sum(price) as price,sum(profit) as profit,sum(price)/sum(profit) as rete,sum(price)+sum(profit) as  total_amt,count(1)  as line_number
    	 from mining_outlay 
-   	 where outlay_day BETWEEN '2020-08-06' and '2020-08-06'
+   	 where outlay_day BETWEEN #{startTime} and #{endTime}
 	</select>
 
+
+	<select id="countByDateGroup" resultMap="BaseResultMap">
+   	 select outlay_day,sum(price) as price,sum(profit) as profit,sum(price)/sum(profit) as rete,sum(price)+sum(profit) as total_amt,count(1)  as line_number
+   	 from mining_outlay 
+   	 where outlay_day BETWEEN #{startTime} and #{endTime} group by outlay_day
+	</select>
 
 </mapper>
