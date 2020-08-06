@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mining.mapper.MiningOutlayMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mining22.domain.MiningOutlay">
+        <id column="outlay_id" property="outlayId" />
+        <result column="outlay_day" property="outlayDay" />
+        <result column="day_number" property="dayNumber" />
+        <result column="price" property="price" />
+        <result column="total_amt" property="totalAmt" />
+        <result column="profit" property="profit" />
+        <result column="rete" property="rete" />
+        <result column="line_number" property="lineNumber" />
+        <result column="register_datetime" property="registerDatetime" />
+        <result column="update_name" property="updateName" />
+        <result column="update_datetime" property="updateDatetime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        outlay_id, outlay_day, day_number, price, total_amt, profit, rete, line_number, register_datetime, update_name, update_datetime
+    </sql>
+
+</mapper>
