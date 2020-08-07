@@ -18,4 +18,8 @@ public interface MiningOutlayMapper extends BaseMapper<MiningOutlay> {
 	public MiningOutlay countByDate(String startTime,String endTime);
 	
 	public List<MiningOutlay> countByDateGroup(String startTime,String endTime);
+	
+	public MiningOutlay countInComeByDate(String startTime,String endTime);
+	
+	public List<MiningOutlay> countInComeByDateGroup(String startTime,String endTime);
 }

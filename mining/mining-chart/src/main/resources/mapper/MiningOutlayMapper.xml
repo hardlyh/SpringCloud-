@@ -35,5 +35,17 @@
    	 from mining_outlay 
    	 where outlay_day BETWEEN #{startTime} and #{endTime} group by outlay_day
 	</select>
+	
+	<select id="countInComeByDate" resultMap="BaseResultMap">
+   	 select sum(price) as price,sum(profit) as profit,sum(price)/sum(profit) as rete,sum(price)+sum(profit) as  total_amt,count(1)  as line_number
+   	 from mining_outlay 
+   	 where line_number BETWEEN #{startTime} and #{endTime}
+	</select>
+	
+	<select id="countInComeByDateGroup" resultMap="BaseResultMap">
+   	 select outlay_day,sum(price) as price,sum(profit) as profit,sum(price)/sum(profit) as rete,sum(price)+sum(profit) as total_amt,count(1)  as line_number
+   	 from mining_outlay 
+   	 where line_number BETWEEN #{startTime} and #{endTime} group by line_number	
+	</select>
 
 </mapper>

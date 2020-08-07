@@ -20,4 +20,9 @@ public interface MiningOutlayService extends IService<MiningOutlay> {
 	
 	List<MiningOutlay> listByDate(String dateTime);
 	
+	MiningOutlay countInComeByDate(String startTime,String endTime);
+
+	List<MiningOutlay> countInComeByDateGroup(String startTime,String endTime);
+	
+	List<MiningOutlay> listInComeByDate(String dateTime);
 }

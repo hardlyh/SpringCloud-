@@ -44,4 +44,22 @@ public class MiningOutlayServiceImpl extends ServiceImpl<MiningOutlayMapper, Min
 		return list;
 	}
 
+	@Override
+	public MiningOutlay countInComeByDate(String startTime, String endTime) {
+		return outlayMapper.countInComeByDate(startTime,endTime);
+	}
+
+	@Override
+	public List<MiningOutlay> countInComeByDateGroup(String startTime, String endTime) {
+		return outlayMapper.countInComeByDateGroup(startTime,endTime);
+	}
+
+	@Override
+	public List<MiningOutlay> listInComeByDate(String dateTime) {
+		QueryWrapper<MiningOutlay> queryWrapper = new QueryWrapper<>();
+		queryWrapper.eq("line_number", dateTime);
+		List<MiningOutlay> list = list(queryWrapper);
+		return list;
+	}
+
 }
