@@ -6,6 +6,8 @@
         <el-tabs v-model="activeName" @tab-click="handleClick">
           <el-tab-pane label="录入数据" name="first"><Input/></el-tab-pane>
           <el-tab-pane label="数据统计" name="second"><Chart/></el-tab-pane>
+          <el-tab-pane label="出账统计" name="three"><Table/></el-tab-pane>
+           <el-tab-pane label="入账统计" name="income"><TableImcome/></el-tab-pane>
         </el-tabs>
       </div>
     </el-col>
@@ -16,16 +18,20 @@
 <script>
 import Input from './input/input.vue'
 import Chart from './chart/chart.vue'
+import Table from './chart/table.vue'
+import TableImcome from './chart/tableIncome.vue'
 export default {
   name: "index",
   data() {
     return {
-      activeName: "second"
+      activeName: "three"
     };
   },
   components:{
     Input,
-    Chart
+    Chart,
+    Table,
+    TableImcome
   },
   methods: {
     handleClick(tab, event) {

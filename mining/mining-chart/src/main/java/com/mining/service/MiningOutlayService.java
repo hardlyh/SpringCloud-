@@ -14,13 +14,13 @@ import com.mining.domain.MiningOutlay;
  * @since 2020-08-06
  */
 public interface MiningOutlayService extends IService<MiningOutlay> {
-	MiningOutlay countByDate(String startTime,String endTime);
+	List<MiningOutlay> countByDate(String startTime,String endTime);
 
 	List<MiningOutlay> countByDateGroup(String startTime,String endTime);
 	
 	List<MiningOutlay> listByDate(String dateTime);
 	
-	MiningOutlay countInComeByDate(String startTime,String endTime);
+	List<MiningOutlay> countInComeByDate(String startTime,String endTime);
 
 	List<MiningOutlay> countInComeByDateGroup(String startTime,String endTime);
 	

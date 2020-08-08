@@ -49,9 +49,7 @@ public class MiningOutlayController {
 	 */
 	@RequestMapping("/getDateCountInfo")
 	public Object getDateCountInfo(String startTime, String endTime) {
-		startTime = "2020-08-05";
-		endTime = "2020-08-06";
-		MiningOutlay countByDate = outlayService.countByDate(startTime, endTime);
+		List<MiningOutlay> countByDate = outlayService.countByDate(startTime, endTime);
 		JSONObject root = new JSONObject();
 		root.put("countInfo", countByDate);
 
@@ -80,7 +78,11 @@ public class MiningOutlayController {
 	 * @throws IllegalAccessException
 	 */
 	@RequestMapping("/saveOutLayInfo")
-	public void saveOutLayInfo(String date, Integer dayNumber, Integer price) throws IllegalAccessException {
+	public Object saveOutLayInfo(String date, Integer dayNumber, Integer price) throws IllegalAccessException {
+		
+		Double price2 = MoneyUtil.mul(price, 100);
+		price = price2.intValue();
+		
 		int rete = map.get(dayNumber);
 		MiningOutlay dto = new MiningOutlay();
 		dto.setDayNumber(dayNumber);
@@ -101,7 +103,11 @@ public class MiningOutlayController {
 		boolean save = outlayService.save(dto);
 
 		// 同时触发总额计算,更新结算表中结束天数的数据
-		incomeService.addTotalInfo(dto);
+//		incomeService.addTotalInfo(dto);
 		LogUtil.info("保存完成");
+		return 0;
 	}
+	
+	
+	
 }

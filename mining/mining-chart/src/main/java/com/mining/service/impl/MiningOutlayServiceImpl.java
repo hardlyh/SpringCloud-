@@ -28,7 +28,7 @@ public class MiningOutlayServiceImpl extends ServiceImpl<MiningOutlayMapper, Min
 	private MiningOutlayMapper outlayMapper;
 	
 	@Override
-	public MiningOutlay countByDate(String startTime,String endTime) {
+	public List<MiningOutlay> countByDate(String startTime,String endTime) {
 		return outlayMapper.countByDate(startTime,endTime);
 	}
 	
@@ -45,7 +45,7 @@ public class MiningOutlayServiceImpl extends ServiceImpl<MiningOutlayMapper, Min
 	}
 
 	@Override
-	public MiningOutlay countInComeByDate(String startTime, String endTime) {
+	public List<MiningOutlay> countInComeByDate(String startTime, String endTime) {
 		return outlayMapper.countInComeByDate(startTime,endTime);
 	}
 

@@ -33,9 +33,7 @@ public class MiningIncomeController {
 	 */
 	@RequestMapping("/getInComeDateCountInfo")
 	public Object getInComeDateCountInfo(String startTime, String endTime) {
-		startTime = "2020-08-05";
-		endTime = "2020-08-06";
-		MiningOutlay countByDate = outlayService.countInComeByDate(startTime, endTime);
+		List<MiningOutlay> countByDate = outlayService.countInComeByDate(startTime, endTime);
 		JSONObject root = new JSONObject();
 		root.put("countInfo", countByDate);
 
