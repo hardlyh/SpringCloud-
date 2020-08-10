@@ -48,7 +48,7 @@
     </el-table>
 
     <el-dialog title="收货地址" :visible.sync="dialogTableVisible">
-      <el-tag type="success">总收入:{{dialogTag.pay2}}</el-tag>&nbsp;
+      <el-tag type="success">本金:{{dialogTag.pay2}}</el-tag>&nbsp;
       <el-tag type="danger">总利润:{{dialogTag.profit}}</el-tag>
       <el-table :data="detailList">
         <el-table-column prop="outlayDay" label="购买时间" align="center"></el-table-column>
