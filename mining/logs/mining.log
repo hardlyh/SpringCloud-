@@ -9251,3 +9251,14 @@ Caused by: java.net.ConnectException: Connection refused: connect
 2020-08-23 23:07:06  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L113 CLASS_Method  : com.mining.controller.MiningIncomeController.test
 2020-08-23 23:07:06  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L114 REQUEST ARGS  : []
 2020-08-23 23:07:06  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L115 Request agrs  : null
+2020-08-23 23:07:52  [ LogUtil:60 ] - [ INFO ]  Thread22 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L109 ============================= Start =======================
+2020-08-23 23:07:52  [ LogUtil:60 ] - [ INFO ]  Thread22 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L110 URL           : http://localhost:2001/miningIncome/test
+2020-08-23 23:07:52  [ LogUtil:60 ] - [ INFO ]  Thread22 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L111 HTTP_Method   : GET
+2020-08-23 23:07:52  [ LogUtil:60 ] - [ INFO ]  Thread22 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L112 IP            : 0:0:0:0:0:0:0:1
+2020-08-23 23:07:52  [ LogUtil:60 ] - [ INFO ]  Thread22 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L113 CLASS_Method  : com.mining.controller.MiningIncomeController.test
+2020-08-23 23:07:52  [ LogUtil:60 ] - [ INFO ]  Thread22 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L114 REQUEST ARGS  : []
+2020-08-23 23:07:52  [ LogUtil:60 ] - [ INFO ]  Thread22 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L115 Request agrs  : null
+2020-08-23 23:07:54  [ LogUtil:60 ] - [ INFO ]  Thread22 SendMsgUtil.sendText() L38 推送消息返回:{"errcode":0,"errmsg":"ok"}
+2020-08-23 23:07:54  [ LogUtil:60 ] - [ INFO ]  Thread22 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L171 Response args : {"returnCode":96,"returnMsg":"opk"}
+2020-08-23 23:07:54  [ LogUtil:60 ] - [ INFO ]  Thread22 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L180 SPEND TIME : 2115 ms
+2020-08-23 23:07:54  [ LogUtil:60 ] - [ INFO ]  Thread22 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L181 ============================= End =======================
