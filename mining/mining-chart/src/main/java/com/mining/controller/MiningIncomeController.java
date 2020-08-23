@@ -4,12 +4,12 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import org.springframework.web.bind.annotation.RestController;
 
 import com.alibaba.fastjson.JSONObject;
 import com.mining.domain.MiningOutlay;
 import com.mining.service.MiningOutlayService;
+import com.mining.task.PeopleTotalTask;
 
 /**
  * <p>
@@ -25,7 +25,15 @@ public class MiningIncomeController {
 
 	@Autowired
 	private MiningOutlayService outlayService;
+	
+	@Autowired
+	private PeopleTotalTask task;
 
+	@RequestMapping("/test")
+	public Object test() {
+		task.getPeopleCountTask();
+		return "opk";
+	}
 	/**
 	 * 获取到指定时间段内的总额信息
 	 * 

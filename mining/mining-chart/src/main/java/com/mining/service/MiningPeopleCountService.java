@@ -1,6 +1,7 @@
 package com.mining.service;
 
 import com.mining.domain.MiningPeopleCount;
+import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -13,4 +14,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface MiningPeopleCountService extends IService<MiningPeopleCount> {
 
+	
+	
+	public JSONObject getStatisticsByDate(String date)throws IllegalAccessException;
 }

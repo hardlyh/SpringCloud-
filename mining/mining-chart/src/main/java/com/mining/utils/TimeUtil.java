@@ -334,6 +334,28 @@ public class TimeUtil {
 		return dayAfter;
 	}
 	
+/** 
+	
+	* 获得指定日期的后i天
+	 * @param specifiedDay 
+	* @return 
+	*/
+	public static String getBeforeDay(String specifiedDay, int i) {
+
+		Calendar c = Calendar.getInstance();
+		Date date = null;
+		try {
+			date = new SimpleDateFormat("yyyy-MM-dd").parse(specifiedDay);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		c.setTime(date);
+		int day = c.get(Calendar.DATE);
+		c.set(Calendar.DATE, day - i);
+		String dayAfter = new SimpleDateFormat("yyyy-MM-dd").format(c.getTime());
+		return dayAfter;
+	}
+	
     /**
     * @Description: 将传递进来的日期格式字符串转化为对应的Date类型
     * @param dateStr 日期字符串

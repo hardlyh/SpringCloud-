@@ -9168,3 +9168,86 @@ Caused by: java.net.ConnectException: Connection refused: connect
 2020-08-23 11:36:36  [ LogUtil:60 ] - [ INFO ]  Thread21 ImageTest.getCode() L103 获取人数信息成功
 2020-08-23 11:36:36  [ LogUtil:60 ] - [ INFO ]  Thread21 PeopleTotalTask.getPeopleCountTask() L32 code:{"code":200,"data":{"registration_num":46802,"onlinenum":37476},"succ":true,"message":"ok"}
 2020-08-23 11:36:37  [ LogUtil:60 ] - [ INFO ]  Thread21 PeopleTotalTask.getPeopleCountTask() L42 保存成功人数
+2020-08-23 13:03:27  [ LogUtil:60 ] - [ INFO ]  Thread1 SendMsgUtil.sendText() L36 推送消息返回:{"errcode":0,"errmsg":"ok"}
+2020-08-23 22:19:46  [ LogUtil:60 ] - [ INFO ]  Thread1 SendMsgUtil.sendText() L37 推送消息返回:{"errcode":0,"errmsg":"ok"}
+2020-08-23 22:20:54  [ LogUtil:60 ] - [ INFO ]  Thread1 SendMsgUtil.sendText() L37 推送消息返回:{"errcode":0,"errmsg":"ok"}
+2020-08-23 22:21:07  [ LogUtil:60 ] - [ INFO ]  Thread1 SendMsgUtil.sendText() L37 推送消息返回:{"errcode":0,"errmsg":"ok"}
+2020-08-23 22:21:31  [ LogUtil:60 ] - [ INFO ]  Thread1 SendMsgUtil.sendText() L37 推送消息返回:{"errcode":0,"errmsg":"ok"}
+2020-08-23 22:22:17  [ LogUtil:60 ] - [ INFO ]  Thread1 SendMsgUtil.sendText() L37 推送消息返回:{"errcode":0,"errmsg":"ok"}
+2020-08-23 22:58:58  [ LogUtil:60 ] - [ INFO ]  Thread21 SendMsgUtil.sendText() L38 推送消息返回:{"errcode":0,"errmsg":"ok"}
+2020-08-23 22:59:00  [ LogUtil:60 ] - [ INFO ]  Thread21 SendMsgUtil.sendText() L38 推送消息返回:{"errcode":0,"errmsg":"ok"}
+2020-08-23 22:59:45  [ LogUtil:94 ] - [ ERROR ]  Thread1 PeopleTotalTask.getPeopleCountTask() L69 计算推送消息出现异常:java.lang.NullPointerException
+2020-08-23 22:59:58  [ LogUtil:94 ] - [ ERROR ]  Thread1 PeopleTotalTask.getPeopleCountTask() L69 计算推送消息出现异常:java.lang.NullPointerException
+2020-08-23 23:00:18  [ LogUtil:60 ] - [ INFO ]  Thread23 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L109 ============================= Start =======================
+2020-08-23 23:00:18  [ LogUtil:60 ] - [ INFO ]  Thread23 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L110 URL           : http://localhost:2001/miningIncome/test
+2020-08-23 23:00:18  [ LogUtil:60 ] - [ INFO ]  Thread23 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L111 HTTP_Method   : GET
+2020-08-23 23:00:18  [ LogUtil:60 ] - [ INFO ]  Thread23 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L112 IP            : 0:0:0:0:0:0:0:1
+2020-08-23 23:00:18  [ LogUtil:60 ] - [ INFO ]  Thread23 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L113 CLASS_Method  : com.mining.controller.MiningIncomeController.test
+2020-08-23 23:00:18  [ LogUtil:60 ] - [ INFO ]  Thread23 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L114 REQUEST ARGS  : []
+2020-08-23 23:00:18  [ LogUtil:60 ] - [ INFO ]  Thread23 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L115 Request agrs  : null
+2020-08-23 23:00:30  [ LogUtil:60 ] - [ INFO ]  Thread25 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L109 ============================= Start =======================
+2020-08-23 23:00:30  [ LogUtil:60 ] - [ INFO ]  Thread25 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L110 URL           : http://localhost:2001/miningIncome/test
+2020-08-23 23:00:30  [ LogUtil:60 ] - [ INFO ]  Thread25 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L111 HTTP_Method   : GET
+2020-08-23 23:00:30  [ LogUtil:60 ] - [ INFO ]  Thread25 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L112 IP            : 0:0:0:0:0:0:0:1
+2020-08-23 23:00:30  [ LogUtil:60 ] - [ INFO ]  Thread25 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L113 CLASS_Method  : com.mining.controller.MiningIncomeController.test
+2020-08-23 23:00:30  [ LogUtil:60 ] - [ INFO ]  Thread25 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L114 REQUEST ARGS  : []
+2020-08-23 23:00:30  [ LogUtil:60 ] - [ INFO ]  Thread25 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L115 Request agrs  : null
+2020-08-23 23:00:41  [ LogUtil:60 ] - [ INFO ]  Thread23 SendMsgUtil.sendText() L38 推送消息返回:{"errcode":0,"errmsg":"ok"}
+2020-08-23 23:00:41  [ LogUtil:60 ] - [ INFO ]  Thread25 SendMsgUtil.sendText() L38 推送消息返回:{"errcode":0,"errmsg":"ok"}
+2020-08-23 23:00:41  [ LogUtil:60 ] - [ INFO ]  Thread23 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L171 Response args : {"returnCode":96,"returnMsg":"opk"}
+2020-08-23 23:00:41  [ LogUtil:60 ] - [ INFO ]  Thread25 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L171 Response args : {"returnCode":96,"returnMsg":"opk"}
+2020-08-23 23:00:41  [ LogUtil:60 ] - [ INFO ]  Thread23 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L180 SPEND TIME : 22233 ms
+2020-08-23 23:00:41  [ LogUtil:60 ] - [ INFO ]  Thread25 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L180 SPEND TIME : 10611 ms
+2020-08-23 23:00:41  [ LogUtil:60 ] - [ INFO ]  Thread23 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L181 ============================= End =======================
+2020-08-23 23:00:41  [ LogUtil:60 ] - [ INFO ]  Thread25 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L181 ============================= End =======================
+2020-08-23 23:01:44  [ LogUtil:94 ] - [ ERROR ]  Thread1 PeopleTotalTask.getPeopleCountTask() L69 计算推送消息出现异常:java.lang.NullPointerException
+2020-08-23 23:02:21  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L109 ============================= Start =======================
+2020-08-23 23:02:21  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L110 URL           : http://localhost:2001/miningIncome/test
+2020-08-23 23:02:21  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L111 HTTP_Method   : GET
+2020-08-23 23:02:21  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L112 IP            : 0:0:0:0:0:0:0:1
+2020-08-23 23:02:21  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L113 CLASS_Method  : com.mining.controller.MiningIncomeController.test
+2020-08-23 23:02:21  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L114 REQUEST ARGS  : []
+2020-08-23 23:02:21  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L115 Request agrs  : null
+2020-08-23 23:03:24  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L109 ============================= Start =======================
+2020-08-23 23:03:24  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L110 URL           : http://localhost:2001/miningIncome/test
+2020-08-23 23:03:24  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L111 HTTP_Method   : GET
+2020-08-23 23:03:24  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L112 IP            : 0:0:0:0:0:0:0:1
+2020-08-23 23:03:24  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L113 CLASS_Method  : com.mining.controller.MiningIncomeController.test
+2020-08-23 23:03:24  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L114 REQUEST ARGS  : []
+2020-08-23 23:03:24  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L115 Request agrs  : null
+2020-08-23 23:04:15  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L109 ============================= Start =======================
+2020-08-23 23:04:15  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L110 URL           : http://localhost:2001/miningIncome/test
+2020-08-23 23:04:15  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L111 HTTP_Method   : GET
+2020-08-23 23:04:15  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L112 IP            : 0:0:0:0:0:0:0:1
+2020-08-23 23:04:15  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L113 CLASS_Method  : com.mining.controller.MiningIncomeController.test
+2020-08-23 23:04:15  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L114 REQUEST ARGS  : []
+2020-08-23 23:04:15  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L115 Request agrs  : null
+2020-08-23 23:04:33  [ LogUtil:94 ] - [ ERROR ]  Thread26 PeopleTotalTask.getPeopleCountTask() L69 计算推送消息出现异常:java.lang.NullPointerException
+2020-08-23 23:04:33  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L171 Response args : {"returnCode":96,"returnMsg":"opk"}
+2020-08-23 23:04:33  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L180 SPEND TIME : 18082 ms
+2020-08-23 23:04:33  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L181 ============================= End =======================
+2020-08-23 23:04:47  [ LogUtil:60 ] - [ INFO ]  Thread28 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L109 ============================= Start =======================
+2020-08-23 23:04:47  [ LogUtil:60 ] - [ INFO ]  Thread28 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L110 URL           : http://localhost:2001/miningIncome/test
+2020-08-23 23:04:47  [ LogUtil:60 ] - [ INFO ]  Thread28 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L111 HTTP_Method   : GET
+2020-08-23 23:04:47  [ LogUtil:60 ] - [ INFO ]  Thread28 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L112 IP            : 0:0:0:0:0:0:0:1
+2020-08-23 23:04:47  [ LogUtil:60 ] - [ INFO ]  Thread28 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L113 CLASS_Method  : com.mining.controller.MiningIncomeController.test
+2020-08-23 23:04:47  [ LogUtil:60 ] - [ INFO ]  Thread28 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L114 REQUEST ARGS  : []
+2020-08-23 23:04:47  [ LogUtil:60 ] - [ INFO ]  Thread28 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L115 Request agrs  : null
+2020-08-23 23:05:43  [ LogUtil:60 ] - [ INFO ]  Thread27 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L109 ============================= Start =======================
+2020-08-23 23:05:43  [ LogUtil:60 ] - [ INFO ]  Thread27 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L110 URL           : http://localhost:2001/miningIncome/test
+2020-08-23 23:05:43  [ LogUtil:60 ] - [ INFO ]  Thread27 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L111 HTTP_Method   : GET
+2020-08-23 23:05:43  [ LogUtil:60 ] - [ INFO ]  Thread27 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L112 IP            : 0:0:0:0:0:0:0:1
+2020-08-23 23:05:43  [ LogUtil:60 ] - [ INFO ]  Thread27 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L113 CLASS_Method  : com.mining.controller.MiningIncomeController.test
+2020-08-23 23:05:43  [ LogUtil:60 ] - [ INFO ]  Thread27 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L114 REQUEST ARGS  : []
+2020-08-23 23:05:43  [ LogUtil:60 ] - [ INFO ]  Thread27 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L115 Request agrs  : null
+2020-08-23 23:06:04  [ LogUtil:60 ] - [ INFO ]  Thread27 SendMsgUtil.sendText() L38 推送消息返回:{"errcode":0,"errmsg":"ok"}
+2020-08-23 23:06:04  [ LogUtil:60 ] - [ INFO ]  Thread27 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L171 Response args : {"returnCode":96,"returnMsg":"opk"}
+2020-08-23 23:06:04  [ LogUtil:60 ] - [ INFO ]  Thread27 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L180 SPEND TIME : 21868 ms
+2020-08-23 23:06:04  [ LogUtil:60 ] - [ INFO ]  Thread27 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L181 ============================= End =======================
+2020-08-23 23:07:06  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L109 ============================= Start =======================
+2020-08-23 23:07:06  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L110 URL           : http://localhost:2001/miningIncome/test
+2020-08-23 23:07:06  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L111 HTTP_Method   : GET
+2020-08-23 23:07:06  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L112 IP            : 0:0:0:0:0:0:0:1
+2020-08-23 23:07:06  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L113 CLASS_Method  : com.mining.controller.MiningIncomeController.test
+2020-08-23 23:07:06  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L114 REQUEST ARGS  : []
+2020-08-23 23:07:06  [ LogUtil:60 ] - [ INFO ]  Thread26 InterfaceRequestErrrorAndPerformanceLog.aroundAdvice() L115 Request agrs  : null
