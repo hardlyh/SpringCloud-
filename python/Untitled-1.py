@@ -2,6 +2,9 @@ import requests
 import json
 import ast
 from jqdatasdk import *
+from PIL import Image
+import pytesseract
+
 global false, null, true
 false = null = true = ''
 # 登录模块
@@ -26,6 +29,9 @@ def login(user,pas):
     validateData = eval(httpData)
     imgBase = validateData['data']['url']
     
+def imgageBase():
+    text=pytesseract.image_to_string(Image.open('C:\\Users\\liyuhui\\Desktop\\222.png'),lang='chi_sim')
+    print(text)
 
 # 获取所有人数
 def getPeopleCount():
@@ -81,4 +87,4 @@ def JqData():
     # print(df)
 
 if __name__ == '__main__':
-    JqData()
+    imgageBase()
