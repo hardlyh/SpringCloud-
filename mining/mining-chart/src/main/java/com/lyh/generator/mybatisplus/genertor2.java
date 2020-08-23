@@ -43,19 +43,19 @@ public class genertor2 {
 		// 2. 数据源配置
 		DataSourceConfig dsConfig = new DataSourceConfig();
 		dsConfig.setDbType(DbType.MYSQL) // 设置数据库类型
-				.setDriverName("com.mysql.jdbc.Driver").setUrl("jdbc:mysql://localhost:3306/mining?useUnicode=true&useSSL=false")
-				.setUsername("root").setPassword("");
+				.setDriverName("com.mysql.jdbc.Driver").setUrl("jdbc:mysql://129.28.184.11:23/mining?useUnicode=true&useSSL=false")
+				.setUsername("root").setPassword("root");
 
 		// 3. 策略配置
 		StrategyConfig stConfig = new StrategyConfig();
 		stConfig.setCapitalMode(true) // 全局大写命名
 				.setRestControllerStyle(true)
 				.setNaming(NamingStrategy.underline_to_camel) // 数据库表映射到实体的命名策略
-				.setInclude("mining_account","mining_income","mining_outlay"); // 生成的表
+				.setInclude("mining_people_count"); // 生成的表
 
 		// 4. 包名策略配置
 		PackageConfig pkConfig = new PackageConfig();
-		pkConfig.setParent("com.mining22").setMapper("mapper").setService("service").setController("controller")
+		pkConfig.setParent("com.mining").setMapper("mapper").setService("service").setController("controller")
 				.setEntity("domain").setXml("mapper");
 
 		// 5. 整合配置

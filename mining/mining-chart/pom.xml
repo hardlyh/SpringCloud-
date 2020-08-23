@@ -20,6 +20,8 @@
 		<java.version>1.8</java.version>
 	</properties>
 
+
+
 	<dependencies>
 		<!-- springBoot -->
 		<dependency>
@@ -67,23 +69,36 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.13.1</version>
+		</dependency>
+
+		<dependency>
 			<groupId>org.apache.velocity</groupId>
 			<artifactId>velocity-engine-core</artifactId>
 			<version>2.2</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
 		</dependency>
-		
+
 
 		<dependency>
 			<groupId>com.baomidou</groupId>
 			<artifactId>mybatis-plus-boot-starter</artifactId>
 			<version>3.3.2</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.arronlong</groupId>
+			<artifactId>httpclientutil</artifactId>
+			<version>1.0.4</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

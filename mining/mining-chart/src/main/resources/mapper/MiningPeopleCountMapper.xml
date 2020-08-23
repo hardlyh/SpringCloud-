@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mining.mapper.MiningPeopleCountMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mining.domain.MiningPeopleCount">
+        <id column="count_id" property="countId" />
+        <result column="group_id" property="groupId" />
+        <result column="count_day" property="countDay" />
+        <result column="total_people" property="totalPeople" />
+        <result column="online_people" property="onlinePeople" />
+        <result column="register_datetime" property="registerDatetime" />
+        <result column="note" property="note" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        count_id, group_id, count_day, total_people, online_people, register_datetime, note
+    </sql>
+
+</mapper>
