@@ -39,6 +39,20 @@
 			</exclusions>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-boot-starter</artifactId>
+			<version>3.2.0</version>
+		</dependency>
+
+		<!-- mysql -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.13</version>
+			<scope>runtime</scope>
+		</dependency>
 	</dependencies>
 
 
@@ -59,6 +73,7 @@
 		<module>springcloud-eureka-server</module>
 		<module>springcloud-eureka-client-produce</module>
 		<module>springcloud-eureka-client-customer</module>
+		<module>springcloud-notice</module>
 	</modules>
 	
 	

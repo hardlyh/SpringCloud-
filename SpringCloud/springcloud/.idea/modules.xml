@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/springcloud-eureka-client-customer/springcloud-eureka-client-customer.iml" filepath="$PROJECT_DIR$/springcloud-eureka-client-customer/springcloud-eureka-client-customer.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud-eureka-client-produce/springcloud-eureka-client-produce.iml" filepath="$PROJECT_DIR$/springcloud-eureka-client-produce/springcloud-eureka-client-produce.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud-eureka-server/springcloud-eureka-server.iml" filepath="$PROJECT_DIR$/springcloud-eureka-server/springcloud-eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-notice/springcloud-notice.iml" filepath="$PROJECT_DIR$/springcloud-notice/springcloud-notice.iml" />
     </modules>
   </component>
 </project>

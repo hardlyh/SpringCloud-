@@ -1,4 +1,4 @@
-package eureka.client.produce.controller;
+package notice.controller;
 
 import java.util.HashMap;
 
