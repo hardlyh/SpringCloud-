@@ -1,8 +1,7 @@
 package notice.service.impl;
 
-
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import notice.eneity.NoticeInfo;
+import notice.entity.NoticeInfo;
 import notice.mapper.NoticeInfoMapper;
 import notice.service.INoticeInfoService;
 import org.springframework.stereotype.Service;
@@ -13,7 +12,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author Lyh
- * @since 2021-05-24
+ * @since 2021-05-31
  */
 @Service
 public class NoticeInfoServiceImpl extends ServiceImpl<NoticeInfoMapper, NoticeInfo> implements INoticeInfoService {

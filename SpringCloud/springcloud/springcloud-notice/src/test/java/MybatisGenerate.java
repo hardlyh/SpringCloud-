@@ -15,6 +15,18 @@ import java.util.Scanner;
 
 public class MybatisGenerate {
 
+
+    // 存放路径
+    private static String filePath = "/src/main/java";
+    // 作者
+    private static String author = "Lyh";
+    private static String url = "jdbc:mysql://106.14.247.199:3306/lyh?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8";
+
+    // 父包名,
+    private static String parent = "notice";
+
+    // 模块名.   mapper会添加module 模块名,
+    private static String mdoule = "";
     /**
      * <p>
      * 读取控制台内容
@@ -43,15 +55,15 @@ public class MybatisGenerate {
         String projectPath = System.getProperty("user.dir");
         System.out.println(projectPath);
 
-        gc.setOutputDir(projectPath + "/src/main/java");
-        gc.setAuthor("Lyh");
+        gc.setOutputDir(projectPath + filePath);
+        gc.setAuthor(author);
         gc.setOpen(false);
         // gc.setSwagger2(true); 实体属性 Swagger2 注解
         mpg.setGlobalConfig(gc);
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://106.14.247.199:3306/lyh?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8");
+        dsc.setUrl(url);
         // dsc.setSchemaName("public");
         dsc.setDriverName("com.mysql.jdbc.Driver");
         dsc.setUsername("root");
@@ -61,8 +73,8 @@ public class MybatisGenerate {
         // 包配置
         PackageConfig pc = new PackageConfig();
 //		pc.setModuleName(scanner("模块名"));
-        pc.setModuleName("notice_info");
-        pc.setParent("notice");
+        pc.setModuleName(mdoule);
+        pc.setParent(parent);
         mpg.setPackageInfo(pc);
 
         // 自定义配置
@@ -114,6 +126,7 @@ public class MybatisGenerate {
         StrategyConfig strategy = new StrategyConfig();
         strategy.setNaming(NamingStrategy.underline_to_camel);
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
+        // 父类
 //        strategy.setSuperEntityClass("com.baomidou.ant.common.BaseEntity");
         strategy.setEntityLombokModel(false);
 

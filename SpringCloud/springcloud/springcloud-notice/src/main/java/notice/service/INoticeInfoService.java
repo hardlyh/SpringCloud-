@@ -1,8 +1,7 @@
 package notice.service;
 
-
 import com.baomidou.mybatisplus.extension.service.IService;
-import notice.eneity.NoticeInfo;
+import notice.entity.NoticeInfo;
 
 /**
  * <p>
@@ -10,7 +9,7 @@ import notice.eneity.NoticeInfo;
  * </p>
  *
  * @author Lyh
- * @since 2021-05-24
+ * @since 2021-05-31
  */
 public interface INoticeInfoService extends IService<NoticeInfo> {
 

@@ -1,4 +1,4 @@
-package notice.notice_info.controller;
+package notice.controller;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
  * </p>
  *
  * @author Lyh
- * @since 2021-05-24
+ * @since 2021-05-31
  */
 @RestController
-@RequestMapping("/notice_info/notice-info")
+@RequestMapping("//notice-info")
 public class NoticeInfoController {
 
 }

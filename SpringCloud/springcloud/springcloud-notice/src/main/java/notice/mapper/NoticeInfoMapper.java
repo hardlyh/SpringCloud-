@@ -1,7 +1,7 @@
 package notice.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import notice.eneity.NoticeInfo;
+import notice.entity.NoticeInfo;
 
 /**
  * <p>
@@ -9,7 +9,7 @@ import notice.eneity.NoticeInfo;
  * </p>
  *
  * @author Lyh
- * @since 2021-05-24
+ * @since 2021-05-31
  */
 public interface NoticeInfoMapper extends BaseMapper<NoticeInfo> {
 

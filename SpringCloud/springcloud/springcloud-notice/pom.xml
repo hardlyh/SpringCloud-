@@ -35,6 +35,12 @@
             <version>2.3.29</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>lyh.learn</groupId>
+            <artifactId>springcloud-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
 	</dependencies>
   
 	<build>

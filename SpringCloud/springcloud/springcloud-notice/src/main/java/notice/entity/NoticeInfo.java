@@ -1,7 +1,9 @@
-package notice.notice_info.entity;
+package notice.entity;
 
-import java.time.LocalDateTime;
+import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 /**
  * <p>
@@ -9,8 +11,9 @@ import java.io.Serializable;
  * </p>
  *
  * @author Lyh
- * @since 2021-05-24
+ * @since 2021-05-31
  */
+@TableName("notice_info")
 public class NoticeInfo implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -39,6 +42,11 @@ public class NoticeInfo implements Serializable {
      * 功能项名称
      */
     private String functionName;
+
+    /**
+     * 通知类型
+     */
+    private Integer noticeType;
 
     /**
      * 通知内容
@@ -95,6 +103,13 @@ public class NoticeInfo implements Serializable {
     public void setFunctionName(String functionName) {
         this.functionName = functionName;
     }
+    public Integer getNoticeType() {
+        return noticeType;
+    }
+
+    public void setNoticeType(Integer noticeType) {
+        this.noticeType = noticeType;
+    }
     public String getNoticeCon() {
         return noticeCon;
     }
@@ -132,6 +147,7 @@ public class NoticeInfo implements Serializable {
             ", appName=" + appName +
             ", functionId=" + functionId +
             ", functionName=" + functionName +
+            ", noticeType=" + noticeType +
             ", noticeCon=" + noticeCon +
             ", sendType=" + sendType +
             ", sendDatetime=" + sendDatetime +

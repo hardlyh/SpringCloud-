@@ -1,6 +1,6 @@
-package notice.notice_info.mapper;
+package notice.mapper;
 
-import notice.notice_info.entity.NoticeInfo;
+import notice.entity.NoticeInfo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * </p>
  *
  * @author Lyh
- * @since 2021-05-24
+ * @since 2021-05-31
  */
 public interface NoticeInfoMapper extends BaseMapper<NoticeInfo> {
 

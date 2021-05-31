@@ -1,8 +1,8 @@
 package notice.controller;
 
 
+import Log.LogUtil;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -11,10 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
  * </p>
  *
  * @author Lyh
- * @since 2021-05-24
+ * @since 2021-05-31
  */
 @RestController
-@RequestMapping("/notice_info/notice-info")
+@RequestMapping("/notice")
 public class NoticeInfoController {
 
+    @RequestMapping("/test")
+    public void test(){
+        LogUtil.info("test");
+    }
 }
