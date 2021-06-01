@@ -22,8 +22,13 @@ import java.util.List;
 @Aspect
 @Order(2)
 public class ControllerAop {
+
+    public ControllerAop() {
+        LogUtil.info("ControllerAop");
+    }
+
         // Controller层
-        @Pointcut("execution(* *.controller.*.*.*(..))")
+        @Pointcut("execution(* *.controller.*.*(..))")
         public void pointCut() {
         }
 
@@ -92,6 +97,7 @@ public class ControllerAop {
 
         @Around(value = "pointCut()")
         public Object aroundAdvice(ProceedingJoinPoint pjp) throws Throwable {
+            LogUtil.info("============================= Start =======================");
             RequestAttributes ra = RequestContextHolder.getRequestAttributes();
             ServletRequestAttributes sra = (ServletRequestAttributes) ra;
 
@@ -101,7 +107,7 @@ public class ControllerAop {
             }
             HttpServletRequest request = sra.getRequest();
 
-            LogUtil.info("============================= Start =======================");
+
             LogUtil.info("URL           : " + request.getRequestURL().toString());
             LogUtil.info("HTTP_Method   : " + request.getMethod());
             LogUtil.info("IP            : " + request.getRemoteAddr());
