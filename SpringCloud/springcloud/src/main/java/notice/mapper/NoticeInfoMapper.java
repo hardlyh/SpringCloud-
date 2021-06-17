@@ -1,7 +1,7 @@
 package notice.mapper;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import notice.entity.NoticeInfo;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
  * <p>

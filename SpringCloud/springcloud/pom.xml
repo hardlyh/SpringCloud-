@@ -53,6 +53,20 @@
 			<version>8.0.13</version>
 			<scope>runtime</scope>
 		</dependency>
+
+		<!-- json -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.60</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.7</version>
+		</dependency>
+
 	</dependencies>
 
 
@@ -74,6 +88,7 @@
 		<module>springcloud-eureka-client-produce</module>
 		<module>springcloud-eureka-client-customer</module>
 		<module>springcloud-notice</module>
+		<module>springcloud-common</module>
 	</modules>
 	
 	
