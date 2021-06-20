@@ -9,6 +9,7 @@ import log.LogUtil;
 import okhttp3.*;
 import okhttp3.Request.Builder;
 import org.jetbrains.annotations.NotNull;
+import sun.applet.Main;
 
 /**
  * http工具类,封装okhttp进行
@@ -25,7 +26,7 @@ public class RequestUtil {
      * @return
      */
     public static String get(String url, HashMap<String, String> headers) {
-        LogUtil.info("请求url:" + url);
+        // LogUtil.info("请求url:" + url);
         Builder builder = addHeader(headers);
         Request request = builder.url(url).build();
         return send(request);
@@ -110,9 +111,9 @@ public class RequestUtil {
         try {
             Response response = call.execute();
             respCon = response.body().string();
-            LogUtil.info("请求返回:" + respCon);
+            // LogUtil.info("请求返回:" + respCon);
         } catch (IOException e) {
-            LogUtil.error("请求异常  : IOException, respCon:" + respCon);
+            // LogUtil.error("请求异常  : IOException, respCon:" + respCon);
             e.printStackTrace();
         }
         return respCon;
@@ -143,5 +144,17 @@ public class RequestUtil {
             }
         });
         return "";
+    }
+
+    public static void main(String[] args) {
+        String url = "https://api.369cx.cn/v2/Line/GetRealTimeLineInfo/218?type=3&rnd=1";
+
+        HashMap<String,String> header = new HashMap<>();
+        header.put("User-Agent","Mozilla/5.0 (Linux; Android 7.1.2; Redmi/vmos) Cx369Android/6200 NetType/WIFI BusQrCodeSdkVersion/4 DarkMode/0");
+        header.put("Host","api.369cx.cn");
+        header.put("Authorization","Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Ik5tWTNOalJoT0RBdE9EQXhOUzAwTmpNNUxXRXlabUV0WmpSaU5tRTVNR0UzWlRVMyIsInJvbGUiOiJWaXNpdG9yIiwibmFtZWlkIjoiLTE4MDgxNzg4OTkiLCJqdGkiOiIzODk0OTE3MC01OWQwLTRkMGQtYTJmNC0yNDk5YWQwYWYyMzUiLCJuYmYiOjE2MjA5MDYwMzIsImV4cCI6MTc3ODY3MjQzMiwiaWF0IjoxNjIwOTA2MDMyLCJpc3MiOiJ3ZWIuMzY5Y3guY24iLCJhdWQiOiJhcGkud2ViLjM2OWN4LmNuIn0.vNwKgScYozMPETGzuQOT0YC73ybTtLpmaHK1GFf58bJ38peFm4hrV9fhaMrGODPvDcTAGmNAkkCCxLektPKgsMWjwWPj7UpXlIlBIhuYjCnXYk48LdMq-rJtaAgbhJZYcw66Z1fDHFg3ps7lg4KFXTvyS_AaFKJKEfN1afJeeygkRrN-GGr2t0lXhADr3bucIWVww38u0_WQXES3iyPB3fDRwgr_2FiuErkHd563J7OYCg3LMC660A6QM-v_ydjWSFh_G00LRtr-cyACCXlCvv-r2ch6qbiys8yqUSNDPToiPos0vO9mgCOv1KfvVy9KHGFF2fXfy9hkwI_u76ol0A");
+
+        String con = get(url, header);
+        System.out.println(con);
     }
 }
