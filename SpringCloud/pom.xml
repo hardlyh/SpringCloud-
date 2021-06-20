@@ -41,19 +41,7 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>com.baomidou</groupId>
-			<artifactId>mybatis-plus-boot-starter</artifactId>
-			<version>3.2.0</version>
-		</dependency>
 
-		<!-- mysql -->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.13</version>
-			<scope>runtime</scope>
-		</dependency>
 
 		<!-- json -->
 		<dependency>
@@ -66,6 +54,12 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 			<version>3.7</version>
+		</dependency>
+
+		<dependency>
+			<groupId>lyh.learn</groupId>
+			<artifactId>springcloud-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
 	</dependencies>
@@ -87,21 +81,30 @@
 			    <artifactId>okhttp</artifactId>
 			    <version>${okhttp.version}</version>
 			</dependency>
-		
-		
+
+			<!-- mysql -->
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>8.0.13</version>
+				<scope>runtime</scope>
+			</dependency>
+
+
+			<dependency>
+				<groupId>com.baomidou</groupId>
+				<artifactId>mybatis-plus-boot-starter</artifactId>
+				<version>3.2.0</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
 
 	<modules>
 		<module>springcloud-eureka-server</module>
-		<module>springcloud-eureka-client-produce</module>
+		<module>springcloud-webspider</module>
 		<module>springcloud-eureka-client-customer</module>
 		<module>springcloud-notice</module>
 		<module>springcloud-common</module>
 	</modules>
-	
-	
-	
-	
 </project>
