@@ -1,11 +1,13 @@
 package aop;
 
+import annotation.ControllerLogAnnotation;
 import log.LogUtil;
 import com.alibaba.fastjson.JSONObject;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestAttributes;
@@ -23,24 +25,10 @@ import java.util.List;
 @Order(2)
 public class ControllerAop {
 
-    public ControllerAop() {
-        LogUtil.info("ControllerAop");
-    }
-
-        // Controller层
-        @Pointcut("execution(* *.controller.*.*(..))")
-        public void pointCut() {
+        public ControllerAop() {
+            LogUtil.info("ControllerAop init");
         }
 
-        // service层
-        @Pointcut("execution(* com.hipay.service.*.*(..))")
-        public void pointCutService() {
-        }
-
-        // dao层
-        @Pointcut("execution(* com.hipay.mapper.*.*(..))")
-        public void pointCutDao() {
-        }
 
         //	@Around(value = "pointCutService()")
         public Object aroundAdviceService(ProceedingJoinPoint pjp) throws Throwable {
@@ -95,7 +83,7 @@ public class ControllerAop {
             }
         }
 
-        @Around(value = "pointCut()")
+        @Around(value =  "@annotation(annotation.ControllerLogAnnotation)")
         public Object aroundAdvice(ProceedingJoinPoint pjp) throws Throwable {
             LogUtil.info("============================= Start =======================");
             RequestAttributes ra = RequestContextHolder.getRequestAttributes();

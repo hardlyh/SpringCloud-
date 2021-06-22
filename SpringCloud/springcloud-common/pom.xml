@@ -12,14 +12,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>springcloud-common</artifactId>
 
-
-
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-aop</artifactId>
 		</dependency>
-
 
 		<dependency>
 			<groupId>log4j</groupId>
@@ -53,6 +50,11 @@
 			<groupId>com.baomidou</groupId>
 			<artifactId>mybatis-plus-boot-starter</artifactId>
 		</dependency>
-	</dependencies>
 
+		<!-- -->
+		<dependency>
+			<groupId>javax.annotation</groupId>
+			<artifactId>javax.annotation-api</artifactId>
+		</dependency>
+	</dependencies>
 </project>
