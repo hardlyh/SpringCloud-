@@ -1,10 +1,12 @@
-package spider.service.impl;
+package dbi.service.impl;
+
+import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import spider.entity.NoticeInfo;
-import spider.mapper.NoticeInfoMapper;
-import spider.service.INoticeInfoService;
-import org.springframework.stereotype.Service;
+
+import dbi.eneity.NoticeInfo;
+import dbi.mapper.NoticeInfoMapper;
+import dbi.service.INoticeInfoService;
 
 /**
  * <p>

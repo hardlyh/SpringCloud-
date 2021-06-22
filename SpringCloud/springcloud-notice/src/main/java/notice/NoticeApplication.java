@@ -1,4 +1,4 @@
-package spider;
+package notice;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;

@@ -1,9 +1,9 @@
-package spider.entity;
-
-import com.baomidou.mybatisplus.annotation.TableName;
+package dbi.eneity;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+
+import com.baomidou.mybatisplus.annotation.TableName;
 
 /**
  * <p>

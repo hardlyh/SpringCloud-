@@ -13,6 +13,11 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
+		
+		<dependency>
+				<groupId>lyh.learn</groupId>
+				<artifactId>springcloud-common</artifactId>
+		</dependency>
 	</dependencies>
 
 

@@ -18,9 +18,11 @@
 
 	<properties>
 		<springcloud-version>Hoxton.SR8</springcloud-version>
-		<!-- eclipse去掉会报错,所以采用这种形式.springboot从2.1.5.RELEASE开始将maven jar的版本升级到3.1.2 ，使得有些IDE工具插件不兼容的3.1.2从而造成改问题出现  -->
+		<!-- eclipse去掉会报错,所以采用这种形式.springboot从2.1.5.RELEASE开始将maven jar的版本升级到3.1.2 
+			，使得有些IDE工具插件不兼容的3.1.2从而造成改问题出现 -->
 		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
 		<okhttp.version>4.9.0</okhttp.version>
+		<common.version>0.0.1-SNAPSHOT</common.version>
 	</properties>
 
 	<dependencies>
@@ -53,13 +55,6 @@
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-			<version>3.7</version>
-		</dependency>
-
-		<dependency>
-			<groupId>lyh.learn</groupId>
-			<artifactId>springcloud-common</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
 	</dependencies>
@@ -74,12 +69,12 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-			
+
 			<!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
 			<dependency>
-			    <groupId>com.squareup.okhttp3</groupId>
-			    <artifactId>okhttp</artifactId>
-			    <version>${okhttp.version}</version>
+				<groupId>com.squareup.okhttp3</groupId>
+				<artifactId>okhttp</artifactId>
+				<version>${okhttp.version}</version>
 			</dependency>
 
 			<!-- mysql -->
@@ -96,6 +91,13 @@
 				<artifactId>mybatis-plus-boot-starter</artifactId>
 				<version>3.2.0</version>
 			</dependency>
+
+			<dependency>
+				<groupId>lyh.learn</groupId>
+				<artifactId>springcloud-common</artifactId>
+				<version>${common.version}</version>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 

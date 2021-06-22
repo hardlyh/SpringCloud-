@@ -1,8 +1,9 @@
 package constans;
 
+/**
+ * 常亮类
+ * @author Administrator
+ *
+ */
 public class ReturnCode {
-
-
-    private static String SUCCESS = "00";
-    private static String ERROR = "00";
 }

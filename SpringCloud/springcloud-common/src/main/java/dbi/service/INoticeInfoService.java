@@ -1,7 +1,8 @@
-package spider.service;
+package dbi.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import spider.entity.NoticeInfo;
+
+import dbi.eneity.NoticeInfo;
 
 /**
  * <p>

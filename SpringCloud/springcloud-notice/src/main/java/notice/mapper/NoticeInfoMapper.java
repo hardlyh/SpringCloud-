@@ -1,7 +1,8 @@
-package spider.mapper;
+package notice.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import spider.entity.NoticeInfo;
+
+import notice.entity.NoticeInfo;
 
 /**
  * <p>
