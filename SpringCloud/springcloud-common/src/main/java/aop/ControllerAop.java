@@ -31,7 +31,6 @@ public class ControllerAop {
             LogUtil.info("ControllerAop init");
         }
 
-
         //	@Around(value = "pointCutService()")
         public Object aroundAdviceService(ProceedingJoinPoint pjp) throws Throwable {
             LogUtil.info("============================= Start =======================");

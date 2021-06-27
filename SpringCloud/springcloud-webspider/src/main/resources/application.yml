@@ -3,11 +3,6 @@ server:
 spring:
    application:
       name: eureka-client-produce
-   datasource:
-      username: root
-      password: root123
-      url: jdbc:mysql://106.14.247.199:3306/lyh?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
-      driver-class-name: com.mysql.cj.jdbc.Driver
       
 eureka:
    client:
