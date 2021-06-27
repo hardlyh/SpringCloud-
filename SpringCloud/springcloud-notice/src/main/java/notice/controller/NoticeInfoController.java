@@ -1,11 +1,9 @@
 package notice.controller;
 
 
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import notice.entity.NoticeInfo;
 
 /**
  * <p>
@@ -21,11 +19,10 @@ public class NoticeInfoController {
 
     /**
      * 向钉钉发送消息
-     * @param info
      * @return
      */
     @RequestMapping("/sendNoticeByDingDing")
-    public Object sendNoticeByDingDing(@RequestBody NoticeInfo info){
+    public Object sendNoticeByDingDing(){
         // 保存信息
 
         // 发送信息
@@ -37,11 +34,10 @@ public class NoticeInfoController {
     
     /**
      * 向方糖发送消息(微信)
-     * @param info
      * @return
      */
     @RequestMapping("/sendNoticeByFangTang")
-    public Object sendNoticeByFangTang(@RequestBody NoticeInfo info){
+    public Object sendNoticeByFangTang(){
         // 保存信息
 
         // 发送信息

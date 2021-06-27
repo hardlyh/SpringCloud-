@@ -1,17 +1,20 @@
 package notice;
 
-import org.mybatis.spring.annotation.MapperScan;
+import log.LogUtil;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
-@EnableEurekaClient
+//EnableEurekaClient
 @SpringBootApplication
-@MapperScan("notice.mapper")
 public class NoticeApplication {
 
+	@Value("${server.port}")
+	public  String name;
 	public static void main(String[] args) {
+
 		SpringApplication.run(NoticeApplication.class, args);
+		LogUtil.info("name2 : " + new NoticeApplication().name);
 	}
 
 }

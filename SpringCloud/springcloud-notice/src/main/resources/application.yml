@@ -3,19 +3,19 @@ server:
 spring:
    application:
       name: notice-server
-   # DataSource Config
-   datasource:
-      username: root
-      password: root123
-      url: jdbc:mysql://106.14.247.199:3306/lyh?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
-      driver-class-name: com.mysql.cj.jdbc.Driver
+   profiles:
+      active: common
 
-eureka:
-   client:
-      service-url:    
-         defaultZone: http://106.14.247.199:7001/eureka/
-   instance:
-      hostname: notice-server
-      # 显示端口和ip信息
-      prefer-ip-address: true
-      instance-id: ${spring.cloud.client.ip-address}:${server.port}
+
+test:
+   name: main-application
+
+#eureka:
+#   client:
+#      service-url:
+#         defaultZone: http://106.14.247.199:7001/eureka/
+#   instance:
+#      hostname: notice-server
+#      # 显示端口和ip信息
+#      prefer-ip-address: true
+#      instance-id: ${spring.cloud.client.ip-address}:${server.port}
