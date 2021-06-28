@@ -23,8 +23,6 @@ import java.util.List;
 
 @Component
 @Aspect
-@Order(2)
-@MapperScan("dbi.mapper")
 public class ControllerAop {
 
         public ControllerAop() {
@@ -84,8 +82,20 @@ public class ControllerAop {
             }
         }
 
-        @Around(value =  "@annotation(annotation.ControllerLogAnnotation)")
-        public Object aroundAdvice(ProceedingJoinPoint pjp) throws Throwable {
+
+        /**
+         * within 类注解起作用
+         * annotation 方法注解起作用
+         * target 对象齐作用
+         * args 方法参数起作用
+         * 参考内容: https://blog.csdn.net/qq_23167527/article/details/78623639
+         * @param pjp
+         * @param controllerLogAnnotation
+         * @return
+         * @throws Throwable
+         */
+        @Around(value =  "@within(controllerLogAnnotation) || @annotation(controllerLogAnnotation)")
+        public Object aroundAdvice(ProceedingJoinPoint pjp,ControllerLogAnnotation controllerLogAnnotation) throws Throwable {
             LogUtil.info("============================= Start =======================");
             RequestAttributes ra = RequestContextHolder.getRequestAttributes();
             ServletRequestAttributes sra = (ServletRequestAttributes) ra;

@@ -1,1 +1,3 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=aop.ControllerAop
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  aop.ControllerAop,\
+  dbi.dbiApplication

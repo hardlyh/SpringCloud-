@@ -10,5 +10,6 @@ eureka:
       fetch-registry: false # fetch-registy 不去扫描服务
       service-url:  # 覆盖默认地址,否则会一直访问8761端口
          defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+   # 设置Eureka的名字
    instance:
-      hostname: localhost
+      hostname: eurekaServer
