@@ -8,7 +8,7 @@ spring:
 
 
 
-
+#eureka客户端配置
 eureka:
    client:
       # 访问Eureka服务端的地址
