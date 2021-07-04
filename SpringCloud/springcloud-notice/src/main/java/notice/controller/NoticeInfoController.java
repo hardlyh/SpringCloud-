@@ -28,7 +28,6 @@ public class NoticeInfoController {
         // 发送信息
 
         // 更新结果
-
         return 0;
     }
     

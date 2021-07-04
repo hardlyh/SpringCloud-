@@ -1,0 +1,6 @@
+spider\controller\NoticeInfoController.class
+spider\entity\NoticeInfo.class
+spider\NoticeApplication.class
+spider\service\impl\NoticeInfoServiceImpl.class
+spider\mapper\NoticeInfoMapper.class
+spider\service\INoticeInfoService.class
